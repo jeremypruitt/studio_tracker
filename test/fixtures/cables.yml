@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  inventory_number: MyString
+  cable_type_id: 1
+  notes: MyText
+
+two:
+  inventory_number: MyString
+  cable_type_id: 1
+  notes: MyText

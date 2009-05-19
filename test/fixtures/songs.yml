@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  promoted: false
+  project_id: 1
+  notes: MyText
+
+two:
+  name: MyString
+  promoted: false
+  project_id: 1
+  notes: MyText

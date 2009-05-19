@@ -1,0 +1,15 @@
+<h1>Projects</h1>
+<hr/>
+<br/>
+<% @projects.each do |p| %>
+  <%= p.name %>: <%= p.start.strftime("%m/%d/%Y") %> - <%= p.end.strftime("%m/%d/%Y") %>
+  <br />
+  <% p.users.each do |u| %>
+    <%= u.name %>
+    <br/>
+    <% u.roles.each do |r| %>
+      <%= r.name %>
+    <% end %>
+  <% end %>
+  <br/>
+<% end %>
