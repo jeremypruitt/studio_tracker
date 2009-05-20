@@ -1,2 +1,15 @@
-<h1>Sessions#index</h1>
-<p>Find me in app/views/sessions/index.html.erb</p>
+<h1>Sessions</h1>
+<hr/>
+<br/>
+<% @sessions.each do |s| %>
+  <%= s.name %>: <%= s.start.strftime("%m/%d/%Y") %> - <%= s.end.strftime("%m/%d/%Y") %>
+  <br />
+  <% s.users.each do |u| %>
+    <%= u.name %>
+    <br/>
+    <% u.roles.each do |r| %>
+      <%= r.name %>
+    <% end %>
+  <% end %>
+  <br/>
+<% end %>
