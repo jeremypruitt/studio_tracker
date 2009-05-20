@@ -1,2 +1,22 @@
-<h1>Projects#new</h1>
-<p>Find me in app/views/projects/new.html.erb</p>
+<div id="yield_header">
+  <h1>Add a New Project</h1>
+</div>
+
+<% form_for(@project) do |f| %>
+  <table>
+    <tr>
+      <th>Project Name</th>
+      <td><%= f.text_field :project_name %></td>
+    </tr>
+    <tr>
+      <th>Start Time</th>
+      <td><%= calendar_select_date_tag "start", "", :time => true %></td>
+    </tr>
+    <tr>
+      <th>Notes</th>
+      <td><%= f.text_field :notes %></td>
+    </tr>
+  </table>
+  <br />
+  <%= f.submit 'Add Project' %>
+<% end %>

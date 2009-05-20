@@ -5,15 +5,14 @@
 <table>
   <tr>
     <th>Project</th>
-    <th>Artist</th>
     <th>Start/End Time</th>
     <th>Notes</th>
   </tr>
 <% @projects.each do |p| %>
   <tr>
     <td><%= p.name%></td>
-    <td><%= u.display_name %></td>
-    <td><%= p.strftime("%m/%d/%Y") %> - <%= p.end.strftime("%m/%d/%Y") %></td>
+    <td><%= p.start.strftime("%m/%d/%Y") %> - <%= p.end.strftime("%m/%d/%Y") %></td>
+    <td><%= p.notes%></td>
   </tr>
 <% end %>
 </table>
