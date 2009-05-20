@@ -1,2 +1,22 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div id="yield_header">
+  <h1>Add a New User</h1>
+</div>
+
+<% form_for(@user) do |f| %>
+  <table>
+    <tr>
+      <th>Full Name</th>
+      <td><%= f.text_field :display_name %></td>
+    </tr>
+    <tr>
+      <th>Username</th>
+      <td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td><%= f.text_field :email %></td>
+    </tr>
+  </table>
+  <br />
+  <%= f.submit 'Add User' %>
+<% end %>

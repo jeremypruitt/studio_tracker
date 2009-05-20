@@ -1,5 +1,5 @@
 <div id="yield_header">
-  <h1>A List of All Users</h1>
+  <h1>A List of All Users - <%= link_to 'add', new_user_path %></h1>
 </div>
 
 <table>
@@ -16,7 +16,3 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New user', new_user_path %>
