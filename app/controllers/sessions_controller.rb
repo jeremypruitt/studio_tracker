@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def index
-    @sessions = Sessions.find :all
+    @sessions = Session.find :all
 
     respond_to do |format|
       format.html

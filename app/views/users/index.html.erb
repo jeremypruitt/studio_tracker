@@ -1,7 +1,22 @@
-<h1>Users</h1>
-<hr/>
-<br/>
+<div id="yield_header">
+  <h1>A List of All Users</h1>
+</div>
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Full Name</th>
+    <th>Email</th>
+  </tr>
 <% @users.each do |u| %>
-  <%= u.name %>: <%= u.display_name %> (<%= u.email %>)
-  <br/>
+  <tr>
+    <td><%= u.name %></td>
+    <td><%= u.display_name %></td>
+    <td><%= u.email %></td>
+  </tr>
 <% end %>
+</table>
+
+<br />
+
+<%= link_to 'New user', new_user_path %>

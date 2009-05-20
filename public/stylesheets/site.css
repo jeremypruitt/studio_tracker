@@ -1,0 +1,99 @@
+#container {
+  padding: 0;
+  margin:  0;
+}
+#header {
+  background: #036;
+  padding: 0;
+}
+#header h1 {
+  color:       #fc0;
+  font-size:   1.7em;
+  font-weight: normal;
+  margin:      0 0 0 .5em;
+  padding:     .3em 0 .3em 0;
+  text-align:  left;
+}
+
+#header h1 a:link, #header h1 a:visited {
+  color: #fc0;
+  text-decoration: none;
+}
+
+#header h1 span {
+  color: #fff;
+  font-family:"Lucida Grande",arial,sans-serif;
+  font-size: .6em;
+  font-weight:normal;
+}
+
+body {
+  font: normal .8em auto "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  color: #4f6b72;
+  background: #E6EAE9;
+  margin: 0;
+}
+
+a {
+  color: #c75f3e;
+}
+
+#content {
+  padding: 0;
+  margin:  0 5em 0 2em;
+  background: #E6EAE9;
+}
+#main {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border-width: 0;
+  width 90%;
+}
+#yield {
+  padding: 1em;
+  margin: 0;
+}
+#yield table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+  color: #4f6b72;
+  border-right: 1px solid #C1DAD7;
+  border-bottom: 1px solid #C1DAD7;
+  border-top: 1px solid #C1DAD7;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 6px 6px 6px 12px;
+  background: #aaa;
+}
+
+td {
+  border-right: 1px solid #C1DAD7;
+  border-bottom: 1px solid #C1DAD7;
+  background: #fff;
+  padding: 6px 6px 6px 12px;
+  color: #4f6b72;
+}
+
+.dark{
+    background:#f3f3f3;
+}
+.light{
+    background:#FFF;
+}
+
+
+#yield_header h1 {
+  margin:  0;
+  padding: 0 0 .7em 0;
+  vertical-align: center;
+  font-family: "Lucida Grande",arial,sans-serif;
+  font-size:14px;
+  font-weight:bold;
+  letter-spacing: .2em;
+}
