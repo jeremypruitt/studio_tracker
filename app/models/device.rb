@@ -6,4 +6,8 @@ class Device < ActiveRecord::Base
   belongs_to :user
   belongs_to :manufacturer
   belongs_to :device_type
+
+  def mfg_model
+    "#{manufacturer_id} #{model}"
+  end
 end

@@ -4,12 +4,14 @@
 
 <table>
   <tr>
-    <th>Device</th>
+    <th>Inv #</th>
+    <th>Mfg/Model</th>
     <th>Description</th>
   </tr>
 <% @devices.each do |d| %>
   <tr>
-    <td><%= d.name %></td>
+    <td><%= d.inventory_number %></td>
+    <td><%= d.mfg_model %></td>
     <td><%= d.notes %></td>
   <tr>
 <% end %>
