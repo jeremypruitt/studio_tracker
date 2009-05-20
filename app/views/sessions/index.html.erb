@@ -1,6 +1,7 @@
-<h1>Sessions</h1>
-<hr/>
-<br/>
+<div id="yield_header">
+  <h1>A List of All Sessions - <%= link_to 'add', new_session_path %></h1>
+</div>
+
 <table>
   <tr>
     <th>Session</th>
@@ -14,16 +15,5 @@
     <td><%= u.display_name %></td>
     <td><%= s.strftime("%m/%d/%Y") %> - <%= s.end.strftime("%m/%d/%Y") %></td>
   </tr>
-#<% @sessions.each do |s| %>
-#  <%= s.name %>: <%= s.start.strftime("%m/%d/%Y") %> - <%= s.end.strftime("%m/%d/%Y") %>
-#  <br />
-#  <% s.users.each do |u| %>
-#    <%= u.name %>
-#    <br/>
-#    <% u.roles.each do |r| %>
-#      <%= r.name %>
-#    <% end %>
-#  <% end %>
-#  <br/>
 <% end %>
 </table>

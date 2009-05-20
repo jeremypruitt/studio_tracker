@@ -1,15 +1,19 @@
-<h1>Projects</h1>
-<hr/>
-<br/>
+<div id="yield_header">
+  <h1>A List of All Projects - <%= link_to 'add', new_project_path %></h1>
+</div>
+
+<table>
+  <tr>
+    <th>Project</th>
+    <th>Artist</th>
+    <th>Start/End Time</th>
+    <th>Notes</th>
+  </tr>
 <% @projects.each do |p| %>
-  <%= p.name %>: <%= p.start.strftime("%m/%d/%Y") %> - <%= p.end.strftime("%m/%d/%Y") %>
-  <br />
-  <% p.users.each do |u| %>
-    <%= u.name %>
-    <br/>
-    <% u.roles.each do |r| %>
-      <%= r.name %>
-    <% end %>
-  <% end %>
-  <br/>
+  <tr>
+    <td><%= p.name%></td>
+    <td><%= u.display_name %></td>
+    <td><%= p.strftime("%m/%d/%Y") %> - <%= p.end.strftime("%m/%d/%Y") %></td>
+  </tr>
 <% end %>
+</table>
