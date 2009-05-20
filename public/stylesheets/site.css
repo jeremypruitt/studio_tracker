@@ -47,8 +47,9 @@ a {
   margin: 0;
   padding: 0;
   background: #fff;
-  border-width: 0;
   width 90%;
+  border: 1px solid #C1DAD7;
+  border-top: 0px;
 }
 #yield {
   padding: 1em;
