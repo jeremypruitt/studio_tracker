@@ -12,8 +12,9 @@
 <% @sessions.each do |s| %>
   <tr>
     <td><%= s.name%></td>
-    <td><%= u.display_name %></td>
+    <td><%= s.display_name %></td>
     <td><%= s.strftime("%m/%d/%Y") %> - <%= s.end.strftime("%m/%d/%Y") %></td>
+    <td><%= s.notes%></td>
   </tr>
 <% end %>
 </table>
