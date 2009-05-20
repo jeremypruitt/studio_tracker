@@ -6,7 +6,7 @@
   margin-top: .5em;
   margin-right: 2em;
   padding: .6em 0em 0em 0em;
-  border: 1px solid #C1DAD7;
+  border: 2px solid #C1DAD7;
   float:right;
   background: #fff;
   font-size: .9em;
@@ -45,7 +45,7 @@
   -webkit-border-radius: 3px;
   -khtml-border-radius: 3px;	
   -moz-border-radius: 3px;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 #tab {
   padding-top: 2px;
@@ -62,14 +62,20 @@
 #header {
   background: #036;
   padding: 0;
-  border-bottom: 2px dashed #E6EAE9;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  float: left;
+  -webkit-border-bottom-right-radius: 10px;
+  -khtml-border-radius-bottomright: 10px;	
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-right-radius: 10px;
 }
 #header h1 {
   color:       #fc0;
   font-size:   1.7em;
   font-weight: normal;
   margin:      0 0 0 .5em;
-  padding:     .3em 0 .3em 0;
+  padding:     .3em .5em .3em 0;
   text-align:  left;
   letter-spacing: 0px;
 }
@@ -120,6 +126,7 @@ a {
 }
 #yield {
   padding: 1em;
+  padding-top: .7em;
   margin: 0;
 }
 #yield table {
@@ -158,11 +165,13 @@ td {
 
 #yield_header h1 {
   margin:  0;
-  padding: 0 0 .7em 0;
+  padding: 0;
   margin-bottom: .5em;
   vertical-align: center;
   font-family: "Lucida Grande",arial,sans-serif;
-  font-size:14px;
+  font-size:1.2em;
   font-weight:bold;
-  letter-spacing: .2em;
+  text-align: center;
+  letter-spacing: .1em;
+  color: black;
 }
