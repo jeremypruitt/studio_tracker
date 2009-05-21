@@ -1,0 +1,24 @@
+<h1>Track Details</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @track.name %>
+</p>
+<p>
+  <strong>Promoted:</strong>
+  <%=h @track.promoted ? "Yes" : "No" %>
+</p>
+<p>
+  <strong>Session:</strong>
+  <%=h @track.session.name %>
+</p>
+<p>
+  <strong>Notes:</strong>
+  <%=h @track.notes %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_track_path(@track) %> |
+  <%= link_to "Destroy", @track, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", tracks_path %>
+</p>
