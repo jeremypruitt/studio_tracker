@@ -38,15 +38,14 @@ render_tabnav :main,
   end 
 
   add_tab do |t|
-    t.named 'Sessions'
-    t.titled 'Sessions Page'
-    t.links_to :controller => 'sessions'
-  end 
-
-  add_tab do |t|
     t.named 'Inventory'
     t.titled 'Inventory Page'
     t.links_to :controller => 'devices'
+  end 
+
+  add_tab do |t|
+    t.named 'Logout'
+    t.links_to logout_path
   end 
   #  
   # you can use restful routes with:

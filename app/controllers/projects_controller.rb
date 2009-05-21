@@ -11,9 +11,21 @@ class ProjectsController < ApplicationController
   end
 
   def create
+    @project = Project.new(params[:project])
+
+    respond_to do |format|
+      if @project.save
+        flash[:notice] = 'Project was successfully added.'
+        format.html { redirect_to(@project) }
+      else
+        flash[:error] = 'Could not add project.'
+        format.html { render :action => "new" }
+      end
+    end
   end
 
   def new
+    @project = Project.new
   end
 
   def show

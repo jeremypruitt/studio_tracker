@@ -6,8 +6,8 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <title>Studio Tracker - <%= controller.action_name %></title>
     <%= stylesheet_link_tag 'site' %>
+    <%= javascript_include_tag :defaults %>
     <%= calendar_date_select_includes "blue" %>
-    <%= javascript_include_tag "prototype" %>
   </head>
 
   <body>
@@ -16,10 +16,17 @@
         <h1><%= link_to 'Studio Tracker', '/'%></h1>
       </div>
       <div id="tab">
-        <%= tabnav :main %>
+        <% if current_user %>
+          <%= tabnav :main %>
+        <% else %>
+          <%= tabnav :public %>
+        <% end %>
       </div>
       <div id="content">
         <div id="main" class="all-four-rounded-corners">
+          <% if flash[:error] -%>
+            <div id="error"><%= flash[:error] %></div>
+          <% end -%>
           <% if flash[:notice] -%>
             <div id="notice"><%= flash[:notice] %></div>
           <% end -%>

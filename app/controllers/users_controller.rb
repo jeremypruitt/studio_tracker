@@ -15,9 +15,10 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        flash[:notice] = 'User was successfully added.'
-        format.html { redirect_to(@user) }
+        flash[:notice] = 'Registration Successfull.'
+        format.html { redirect_to root_url }
       else
+        flash[:error] = 'Registration failed.'
         format.html { render :action => "new" }
       end
     end

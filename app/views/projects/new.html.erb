@@ -2,21 +2,25 @@
   <h1>Add a New Project</h1>
 </div>
 
-<% form_for(@project) do |f| %>
+<% form_tag :action => 'create' do %>
   <table>
     <tr>
       <th>Project Name</th>
-      <td><%= f.text_field :project_name %></td>
+      <td><%= text_field_tag "project[name]" %></td>
     </tr>
     <tr>
-      <th>Start Time</th>
-      <td><%= calendar_select_date_tag "start", "", :time => true %></td>
+      <th>Start Date/Time</th>
+      <td><%= calendar_date_select_tag "project[start]", "", :time => true %></td>
+    </tr>
+    <tr>
+      <th>End Date/Time</th>
+      <td><%= calendar_date_select_tag "project[end]", "", :time => true %></td>
     </tr>
     <tr>
       <th>Notes</th>
-      <td><%= f.text_field :notes %></td>
+      <td><%= text_field_tag "project[notes]" %></td>
     </tr>
   </table>
   <br />
-  <%= f.submit 'Add Project' %>
+  <%= submit_tag 'Add Project' %>
 <% end %>
