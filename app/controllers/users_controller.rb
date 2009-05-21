@@ -40,10 +40,10 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = current_user(params[:user])
+    @user = current_user
 
     if @user.update_attributes(params[:user])
-      flash[:notice] = "Successfully updated user."
+      flash[:notice] = "Successfully updated profile."
       redirect_to users_url
     else
       render :action => 'edit'

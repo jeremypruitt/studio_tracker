@@ -1,0 +1,16 @@
+<div id="yield_header">
+  <h1>A List of All Tracks - <%= link_to 'add', new_track_path %></h1>
+</div>
+
+<table>
+  <tr>
+    <th>Track Name</th>
+    <th>Notes</th>
+  </tr>
+<% @tracks.each do |t| %>
+  <tr>
+    <td><%= t.track_name %></td>
+    <td><%= t.notes %></td>
+  </tr>
+<% end %>
+</table>

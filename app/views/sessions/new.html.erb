@@ -1,2 +1,27 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<div id="yield_header">
+  <h1>Add a New Session</h1>
+</div>
+
+<% form_tag :action => 'create' do %>
+  <p>
+    Name: <%= text_field_tag "session[name]" %>
+  </p>
+  <p>
+    Start Date/Time: <%= calendar_date_select_tag "session[start]", "", :time => true %>
+  </p>
+  <p>
+    End Date/Time: <%= calendar_date_select_tag "session[end]", "", :time => true %>
+  </p>
+  <p>
+    Notes: <%= text_area_tag "session[notes]" %>
+  </p>
+  <% for track in @session.tracks %>
+    <% fields_for "session[track_attributes][]", track do |track_form| %>
+      <p>
+        Track: <%= track_form.text_field :name %>
+      </p>
+    <% end %>
+  <% end %>
+  <br />
+  <%= submit_tag 'Add Session' %>
+<% end %>

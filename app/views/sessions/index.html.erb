@@ -5,16 +5,18 @@
 <table>
   <tr>
     <th>Session</th>
-    <th>Artist</th>
     <th>Start/End Time</th>
     <th>Notes</th>
+    <th>Tracks</th>
   </tr>
 <% @sessions.each do |s| %>
   <tr>
     <td><%= s.name%></td>
-    <td><%= s.display_name %></td>
-    <td><%= s.strftime("%m/%d/%Y") %> - <%= s.end.strftime("%m/%d/%Y") %></td>
+    <td><%= s.start.strftime("%m/%d/%Y") rescue nil %> - <%= s.end.strftime("%m/%d/%Y") rescue nil %></td>
     <td><%= s.notes%></td>
+    <td>
+      <%= s.tracks.collect{|t| link_to t.name, {:controller => "tracks", :action => "show", :id => t.id} }.join(", ") %>
+    </td>
   </tr>
 <% end %>
 </table>

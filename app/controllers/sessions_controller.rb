@@ -11,9 +11,19 @@ class SessionsController < ApplicationController
   end
 
   def create
+    @session = Session.new(params[:session])
+
+    if @session.save
+      flash[:notice] = "Successfully created session."
+      redirect_to sessions_path
+    else
+      render :action => 'new'
+    end
   end
 
   def new
+    @session = Session.new
+    3.times { @session.tracks.build }
   end
 
   def show
