@@ -1,0 +1,19 @@
+<div id="yield_header">
+  <h1>Login Form</h1>
+</div>
+
+<% form_for @user_session do |f| %>
+  <%= f.error_messages %>
+  <table>
+    <tr>
+      <th>Username</th>
+      <td><%= f.text_field :username %></td>
+    </tr>
+    <tr>
+      <th>Password</th>
+      <td><%= f.password_field :password %></td>
+    </tr>
+  </table>
+  <br />
+  <%= f.submit 'Login' %>
+<% end %>
