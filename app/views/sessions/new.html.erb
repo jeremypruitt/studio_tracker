@@ -15,13 +15,11 @@
   <p>
     Notes: <%= text_area_tag "session[notes]" %>
   </p>
-  <% for track in @session.tracks %>
-    <% fields_for "session[track_attributes][]", track do |track_form| %>
-      <p>
-        Track: <%= track_form.text_field :name %>
-      </p>
-    <% end %>
-  <% end %>
+  <div id="tracks">
+    <%= render :partial => "track", :collection => @session.tracks %>
+  </div>
+  <%= add_track_link "Add a track" %>
+  <br />
   <br />
   <%= submit_tag 'Add Session' %>
 <% end %>

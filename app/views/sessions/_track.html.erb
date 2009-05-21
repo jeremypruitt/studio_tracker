@@ -1,0 +1,8 @@
+<div class="track">
+<% fields_for "session[track_attributes][]", track do |track_form| %>
+  <p>
+    Track: <%= track_form.text_field :name %>
+    <%= link_to_function "remove", "this.up('.track').remove()" %>
+  </p>
+<% end %>
+</div>
