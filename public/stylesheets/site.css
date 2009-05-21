@@ -2,6 +2,16 @@
   padding: 0;
   margin:  0;
 }
+#toggle {
+  float: left;
+  padding-left: .6em;
+}
+#toggle a {
+  text-decoration: none;
+}
+#main_tabnav input {
+  margin: 0 .6em .5em .6em;
+}
 #main_tabnav {
   margin-top: .5em;
   margin-right: 1em;
@@ -126,7 +136,7 @@ a {
 }
 #yield {
   padding: 1em;
-  padding-top: .7em;
+  padding-top: .4em;
   margin: 0;
 }
 #yield table {
@@ -174,6 +184,11 @@ td {
   text-align: center;
   letter-spacing: .1em;
   color: black;
+}
+#yield_header h1 a {
+  text-decoration: none;
+  font-size:.8em;
+  vertical-align: super;
 }
 #public_tabnav {
   margin-top: .5em;

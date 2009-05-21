@@ -22,6 +22,16 @@
           <%= tabnav :public %>
         <% end %>
       </div>
+        <div id="toggle">
+          <% if current_user %>
+            <%= link_to "profile", user_path(current_user) %>
+            - <%= link_to "logout", logout_path %>
+            - <%= toggle_search_link "search" %>
+        <% else %>
+            <%= link_to "login", login_path %>
+            - <%= link_to "register", new_user_path %>
+        <% end %>
+        </div>
       <div id="content">
         <div id="main" class="all-four-rounded-corners">
           <% if flash[:error] -%>
