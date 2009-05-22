@@ -13,4 +13,11 @@ class User < ActiveRecord::Base
   has_many :session_users
   has_many :sessions,      :through => :session_users
   has_many :session_roles, :through => :session_users
+
+  define_index do
+    indexes username
+    indexes display_name
+    indexes email
+    indexes notes
+  end
 end

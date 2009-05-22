@@ -9,6 +9,12 @@ class Session < ActiveRecord::Base
   has_many :tracks
   has_and_belongs_to_many :songs
 
+  define_index do
+    indexes :name
+    indexes notes
+    indexes tracks.name, :as => :track_name
+  end
+
   def track_attributes=(track_attributes)
     track_attributes.each do |attributes|
       tracks.build(attributes)

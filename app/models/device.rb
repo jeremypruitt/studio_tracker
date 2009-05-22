@@ -7,6 +7,13 @@ class Device < ActiveRecord::Base
   belongs_to :manufacturer
   belongs_to :device_type
 
+  define_index do
+    indexes notes
+    indexes manufacturer.name
+    indexes model
+    indexes inventory_number
+  end
+
   def mfg_model
     "#{manufacturer_id} #{model}"
   end

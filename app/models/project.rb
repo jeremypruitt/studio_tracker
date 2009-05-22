@@ -6,4 +6,9 @@ class Project < ActiveRecord::Base
   has_many :project_users
   has_many :users, :through => :project_users
   has_many :roles, :through => :project_users
+
+  define_index do
+    indexes :name
+    indexes notes
+  end
 end

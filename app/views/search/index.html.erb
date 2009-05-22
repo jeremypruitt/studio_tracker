@@ -1,0 +1,16 @@
+<div id="yield_header">
+  <h1>Search Results</h1>
+</div>
+
+<%- @results.each do |result| -%>
+  <% if result.class == User %>
+    <%= render :partial => 'users/user', :locals => {:user => result} %>
+  <% elsif result.class == Project %>
+    <%= render :partial => 'projects/project', :locals => {:project => result} %>
+  <% elsif result.class == Session %>
+    <%= render :partial => 'sessions/session', :locals => {:session => result} %>
+  <% elsif result.class == Device %>
+    <%= render :partial => 'devices/device', :locals => {:device => result} %>
+  <% end %>
+<%- end -%>
+<%# will_paginate @results %>
